@@ -1,0 +1,14 @@
+#pragma once
+#include <memory>
+
+struct Point;
+
+class Line {
+private:
+    double a, b;
+public:
+    Line(double a, double b);
+    bool contains_point(const Point &p) const;
+};
+
+std::unique_ptr<Line> new_line(double a, double b);
